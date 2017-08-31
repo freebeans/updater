@@ -1,0 +1,3 @@
+Usar .git/refs/heads/master para obter o commit da aplicação rodando.
+Usar configurações do package.json pela aplicação.
+Pensar em uma forma de editar as configurações via package.json da aplicação.
