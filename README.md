@@ -6,6 +6,14 @@ O software deve estar em formato **.zip** e conter um arquivo **package.json** n
 O arquivo **package.json** deve conter as chaves **name** e **version**.
 Estas informações serão mostradas na interface quando o usuário tentar atualizar.
 
+## Instalação e execução
+Você precisará instalar o ambiente Node.js antes de poder utilizar este programa. Você pode utilizar [este](https://github.com/creationix/nvm#installation) método.
+
+Após clonar o repositório, instale as dependências executando ```npm install``` dentro da pasta.
+
+Para rodar, execute ```npm start```. Assim, as configurações em **package.json** serão passadas ao programa como variáveis de ambiente.
+
+
 ## Configurações
 Algumas configurações podem ser editadas no objeto **config** do arquivo **package.json**.
 
