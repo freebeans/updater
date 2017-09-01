@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>TEST PAGE</title>
+
+  <script>
+    window.onload = function() {
+
+      var form = document.getElementById('form');
+      var input = document.getElementById('file');
+      console.log(input);
+
+      input.addEventListener('change', function(e) {
+        var filename = this.files[0].name;
+        var campos = filename.split('.');
+        var ext = campos[campos.length - 1];
+
+        if (ext == 'fwz') {
+          console.log("Carregando ", filename);
+          var file_label = document.getElementsByTagName('label');
+          var dots = ['.', '..', '...'];
+          var dotposition = 0;
+          setInterval(function () {
+            file_label[0].innerText = "CARREGANDO ARQUIVO"+dots[dotposition++];
+            if(dotposition==3) dotposition=0;
+          }, 750);
+          form.submit();
+        } else {
+          window.alert("Formato de arquivo inválido");
+        }
+      });
+
+    }
+  </script>
+
+  <style>
+    .inputfile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .inputfile+label {
+      font-size: 1.75em;
+
+      color: gray;
+      background-color: lightgray;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .inputfile:focus+label,
+    .inputfile+label:hover {
+      background-color: darkgray;
+    }
+  </style>
+</head>
+
+<body style="font-family: monospace;">
+  <center style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+    <div style="
+    font-size: 2em;
+    margin-bottom: 4vh;
+">ATUALIZAÇÃO DE SOFTWARE</div>
+    <form id="form" action="/upload" method="post" enctype="multipart/form-data" style="">
+      <input type="file" name="file" id="file" class="inputfile">
+      <label for="file" style="
+    font-family: monospace;
+    height: 50vh;
+    width: 80vw;
+    text-align: center;
+    line-height: 50vh;
+    border-width: 7px;
+    border-color: grey;
+    border-style: dashed;
+    border-radius: 20px;
+">CLIQUE AQUI OU ARRASTE O ARQUIVO</label>
+      <input type="submit" class="__web-inspector-hide-shortcut__" style="
+    display: none;
+">
+    </form>
+    <div style="
+    font-size: 2em;
+    margin-top: 4vh;
+">Versão atual: 1.0.0
+    </div>
+  </center>
+
+
+</body>
+
+</html>

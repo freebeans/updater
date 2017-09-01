@@ -2,7 +2,7 @@
 Este programa consiste em uma interface web para atualização de software.
 Ele recebe uma atualização de software, descompacta e aplica no devido local.
 
-O software deve estar em formato **.zip** e conter um arquivo **package.json** na raiz.
+O software deve estar em formato **.zip** mas com a extensão **.fwz** e conter um arquivo **package.json** na raiz.
 O arquivo **package.json** deve conter as chaves **name** e **version**.
 Estas informações serão mostradas na interface quando o usuário tentar atualizar.
 
@@ -36,5 +36,16 @@ Para utilizar outro diretório, defina a chave **appsdir**.
 "version": "1.0.0",
 "config": {
   "appsdir": "/opt/myApps"
+}
+```
+
+### Diretório de arquivos temporários
+O diretório padrão para arquivos temporários é **/tmp/apps**.
+Para utilizar outro diretório, defina a chave **tempdir**.
+```
+"name": "updater",
+"version": "1.0.0",
+"config": {
+  "tempdir": "/home/pi/tmp"
 }
 ```

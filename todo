@@ -4,3 +4,5 @@ Pensar em uma forma de editar as configurações via package.json da aplicação
 Utilizar iptables para rotear uma porta comum (ex. 8080) para porta 80, evitando rodar scripts como root. Ver (https://serverfault.com/questions/112795/how-to-run-a-server-on-port-80-as-a-normal-user-on-linux) e (https://gist.github.com/kentbrew/776580).
 Dar uma olhada em (https://github.com/EAAppFoundry/tableau).
 Dicas (http://kb.imakewebsites.ca/2014/01/04/new-node-wishlist/)
+Decidir se vai ser um software só (para mostrar uma só versão e modificar o README)
+  ou se serão vários (e aí devemos modificar a página para mostrar as várias aplicações).

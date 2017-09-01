@@ -4,7 +4,8 @@
   "description": "Web interface for remote software replacement",
   "config": {
     "port": 8000,
-    "appsdir": "/srv/apps"
+    "appsdir": "/srv/apps",
+    "tempdir": "/tmp/apps"
   },
   "main": "index.js",
   "scripts": {
@@ -15,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.4",
+    "express-fileupload": "^0.2.0",
     "pug": "^2.0.0-rc.3"
   }
 }
